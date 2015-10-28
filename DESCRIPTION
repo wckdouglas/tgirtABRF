@@ -3,7 +3,7 @@ Title: Assign variables to TGRIT-ABRF samples
 Version: 0.0.0.1
 Authors: person("Douglas", "Wu", email = "wckdouglas@gmail.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
-Depends: R (>= 3.2.2)
+Depends: R (>= 3.1.1)
 License: GPL-2
 LazyData: true
 Imports:
