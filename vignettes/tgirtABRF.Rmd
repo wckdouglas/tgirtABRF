@@ -2,7 +2,7 @@
 title: "tgirtABRF"
 author: "Dougals Wu"
 date: "November 2, 2015"
-output: html_document
+output: pdf_document
 ---
 
 tgirtABRF provides functions for labeling files from the work, *RNA-Seq of human reference RNA samples using a
