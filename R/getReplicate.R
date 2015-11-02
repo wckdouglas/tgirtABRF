@@ -15,8 +15,8 @@
 #' R code here showing how your function works
 getReplicate <- function(x){
 	ifelse(grepl('ABRF',x),
-		   stri_list2matrix(stri_split_fixed(x,'-'))[5,],
+		   stringi::stri_list2matrix(stringi::stri_split_fixed(x,'-'))[5,],
 		   ifelse(grepl('miRQC',x),
 				  ifelse(grepl('repeat',x),'2','1'),
-					str_sub(x,5,5)))
+					stringi::stri_sub(x,5,5)))
 }

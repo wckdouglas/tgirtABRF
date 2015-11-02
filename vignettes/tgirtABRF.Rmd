@@ -1,0 +1,39 @@
+---
+title: "tgirtABRF"
+author: "Dougals Wu"
+date: "November 2, 2015"
+output: html_document
+---
+
+tgirtABRF provides functions for labeling files from the work, *RNA-Seq of human reference RNA samples using a
+thermostable group II intron reverse transcriptase*.  
+
+Installing:
+```
+library(devtools)
+install_github('wckdouglas/tgirtABRF')
+```
+
+To use the library:
+```{r warning=F, message=F}
+library(tgirtABRF)
+library(dplyr)
+```
+
+The naming system that was used in the project is as follow:
+``` {r echo=T}
+df <- read.csv('names.csv',header=F) 
+colnames(df) = 'names'
+df
+
+```
+
+To extract the annotations from the sample names:
+```{r}
+df %>% 
+    mutate(lab = getLab(names)) %>%     
+    mutate(mixTemplate = getTemplate(names)) %>% 
+    mutate(replicate = getReplicate(names)) %>% 
+    mutate(prep = getPrep(names)) %>%
+    data.frame()
+```

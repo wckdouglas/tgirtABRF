@@ -15,8 +15,8 @@
 #' R code here showing how your function works
 getTemplate <- function(x){
     ifelse(grepl('ABRF',x),
-           stri_list2matrix(stri_split_fixed(x,'-'))[4,],
+           stringi::stri_list2matrix(stringi::stri_split_fixed(x,'-'))[4,],
            ifelse(grepl('miRQC',x),
-                  stri_list2matrix(stri_split_fixed(x,'_'))[2,],
-                  substr(x,4,4)))
+                  stringi::stri_list2matrix(stringi::stri_split_fixed(x,'_'))[2,],
+                  stringi::stri_sub(x,4,4)))
 }

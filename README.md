@@ -5,6 +5,5 @@ This package provide vectorize functions for assigning variables to the [ABRF an
 installing: 
 
 ```
-library(devtools)
-install_github('tgirtABRF',username='wckdouglas')
+devtools::install_github('wckdouglas/tgirtABRF')
 ```
